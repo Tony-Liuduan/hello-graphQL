@@ -1,0 +1,29 @@
+{
+  "name": "hello-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "graphpack",
+    "build": "graphpack build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tony-Liuduan/hello-graphQL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tony-Liuduan/hello-graphQL/issues"
+  },
+  "homepage": "https://github.com/Tony-Liuduan/hello-graphQL#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphpack": "^1.0.9",
+    "graphql": "^15.5.0",
+    "lodash": "^4.17.21",
+    "mongodb": "^3.6.6"
+  }
+}
