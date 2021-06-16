@@ -2,14 +2,14 @@ const Db = require('../db')
 
 module.exports = {
     Mutation: {
-        createUser: (parent, { id, name, email, age, gender }) => Db.user({ id })
+        createUser: (parent, { user: { id, name, email, age, gender } }) => Db.user({ id })
             .then(existUser => {
                 if (existUser)
                     throw new Error('已经有这个id的人了')
             })
             .then(() => Db.createUser({ id, name, email, age, gender }))
         ,
-        updateUser: (parent, { id, name, email, age, gender }) => Db.user({ id })
+        updateUser: (parent, { user: { id, name, email, age, gender } }) => Db.user({ id })
             .then(existUser => {
                 if (!existUser)
                     throw new Error('没有这个id的人')

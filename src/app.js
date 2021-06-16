@@ -18,7 +18,7 @@ app.use('/graphql', graphqlHTTP({
     graphiql: true
 }))
 
-// TODO: 增删改
+// TODO: 增删改??
 
 app.listen(PORT, () =>
     console.log(`Server started on port http://localhost:${PORT}/graphql`)

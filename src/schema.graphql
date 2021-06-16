@@ -7,14 +7,22 @@ type Query {
 
 # Mutation 入口
 type Mutation {
-    createUser(id: ID!, name: String!, email: String!, age: Int, gender: Gender): User!
-    updateUser(id: ID!, name: String, email: String, age: Int, gender: Gender): User!
+    createUser(user: UserInput!): User!
+    updateUser(user: UserInput!): User!
     deleteUser(id: ID!): User
 }
 
 # Subscription 入口
 type Subscription {
     subsUser(id: ID!): User
+}
+
+input UserInput {
+    id: ID!
+    name: String!
+    age: Int!
+    gender: Gender!
+    email: String!
 }
 
 type User implements UserInterface {
